@@ -1,13 +1,26 @@
 {
     "name": "firstclasspostcodes/firstclasspostcodes",
+    "homepage": "https://firstclasspostcodes.com",
     "description": "PHP bindings for the Firstclasspostcodes API",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "postcodes",
+        "postcode lookup",
+        "firstclasspostcodes",
+        "api"
+    ],
     "authors": [
         {
             "name": "Firstclasspostcodes",
             "email": "support@firstclasspostcodes.com"
         }
     ],
-    "require": {}
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "init.php"
+        ]
+    }
 }
