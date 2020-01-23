@@ -1,0 +1,13 @@
+{
+    "name": "firstclasspostcodes/firstclasspostcodes",
+    "description": "PHP bindings for the Firstclasspostcodes API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Firstclasspostcodes",
+            "email": "support@firstclasspostcodes.com"
+        }
+    ],
+    "require": {}
+}
