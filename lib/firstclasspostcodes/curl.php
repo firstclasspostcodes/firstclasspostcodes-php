@@ -15,7 +15,7 @@ trait cURL {
         $url = "$url?$encoded";
       }
     } else {
-      throw new \Exception(sprintf('Invalid http method: %s', $meth));
+      throw new \Exception(sprintf('Invalid http method: %s', $method));
     }
     
     $opts[CURLOPT_URL] = utf8_encode($url);

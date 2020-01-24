@@ -4,8 +4,6 @@ namespace Firstclasspostcodes\Operations;
 
 trait getPostcode {
   public function getPostcode($postcode) {
-    $errorObject = null;
-
     if (gettype($postcode) != 'string' || strlen($postcode) == 0) {
       $errorObject = [
         'message' => sprintf('Unexpected postcode parameter: %s', $postcode),
@@ -31,8 +29,8 @@ trait getPostcode {
 
     $this->emit('operation:getPostcode', $requestParams);
 
-    if ($errorObject) {
-      $error = new ParameterValidationError($errorObject);
+    if (isset($errorObject)) {
+      $error = new \Firstclasspostcodes\ParameterValidationError($errorObject);
       if ($this->config->logger) {
         $this->config->logger->error($error);
       }

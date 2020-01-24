@@ -36,7 +36,7 @@ class Client extends Events implements Operations
     }
     try {
       throw new ResponseError(json_decode($response['body'], true));
-    } catch (Exception $e) {
+    } catch (\Exception $e) {
       throw new ResponseError($response['body'], 'network-error');
     }
   }

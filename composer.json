@@ -22,6 +22,9 @@
         ],
         "test": [
             "vendor/bin/phpunit --bootstrap vendor/autoload.php tests/ "
+        ],
+        "analyse": [
+            "vendor/bin/phpstan analyse --level 0 lib/ tests/"
         ]
     },
     "require": {
@@ -36,6 +39,7 @@
     },
     "require-dev": {
         "overtrue/phplint": "^1.2",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^7.5",
+        "phpstan/phpstan": "^0.12.7"
     }
 }

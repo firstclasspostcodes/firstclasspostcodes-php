@@ -4,8 +4,6 @@ namespace Firstclasspostcodes\Operations;
 
 trait getLookup {
   public function getLookup($latitude, $longitude, $radius = 0.1) {
-    $errorObject;
-
     $latitude = $this->getLookupParseFloat($latitude);
     $longitude = $this->getLookupParseFloat($longitude);
     $radius = $this->getLookupParseFloat($radius);
@@ -20,7 +18,7 @@ trait getLookup {
 
     if (!$latitude || !$longitude || !$isValidCoordinate) {
       $errorObject = [
-        'message' => sprintf('Parameter is invalid: %s').format(json_encode(query_params, JSON_PRETTY_PRINT)),
+        'message' => sprintf('Parameter is invalid: %s', json_encode(query_params, JSON_PRETTY_PRINT)),
         'docUrl' => 'https://docs.firstclasspostcodes.com/operation/getLookup'
       ];
     }
@@ -42,8 +40,8 @@ trait getLookup {
 
     $this->emit('operation:getLookup', $requestParams);
 
-    if ($errorObject) {
-      $error = new ParameterValidationError($errorObject);
+    if (isset($errorObject)) {
+      $error = new \Firstclasspostcodes\ParameterValidationError($errorObject);
       if ($this->config->logger) {
         $this->config->logger->error($error);
       }
@@ -51,7 +49,7 @@ trait getLookup {
       throw $error;
     }
 
-    return $this->request($methiod, $path, $queryParams);
+    return $this->request($method, $path, $queryParams);
   }
 
   private function getLookupParseFloat($val) {
