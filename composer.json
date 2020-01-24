@@ -24,7 +24,7 @@
             "vendor/bin/phpunit --bootstrap vendor/autoload.php tests/ "
         ],
         "analyse": [
-            "vendor/bin/phpstan analyse --level 0 lib/ tests/"
+            "vendor/bin/phpstan analyse --level 0 lib/"
         ]
     },
     "require": {
