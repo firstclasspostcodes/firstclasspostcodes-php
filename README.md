@@ -17,7 +17,7 @@ See [PHP API docs](https://docs.firstclasspostcodes.com/php/getting-started) for
 You can install the bindings via [Composer](http://getcomposer.org/). Run the following command:
 
 ```bash
-composer require firstclasspostcodes/firstclasspostcodes-php
+composer require firstclasspostcodes/firstclasspostcodes
 ```
 
 To use the bindings, use Composer's [autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
