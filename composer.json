@@ -28,7 +28,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/"
+            "lib/"
         ],
         "files": [
             "init.php"
