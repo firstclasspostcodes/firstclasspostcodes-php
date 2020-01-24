@@ -16,11 +16,26 @@
             "email": "support@firstclasspostcodes.com"
         }
     ],
+    "scripts": {
+        "lint": [
+            "vendor/bin/phplint"
+        ],
+        "test": [
+            "vendor/bin/phpunit --bootstrap vendor/autoload.php tests/ "
+        ]
+    },
     "require": {
     },
     "autoload": {
+        "classmap": [
+            "src/"
+        ],
         "files": [
             "init.php"
         ]
+    },
+    "require-dev": {
+        "overtrue/phplint": "^1.2",
+        "phpunit/phpunit": "^7.5"
     }
 }

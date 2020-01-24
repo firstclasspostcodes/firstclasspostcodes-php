@@ -5,7 +5,6 @@ namespace Firstclasspostcodes;
 trait cURL {
   private function cURL($method, $url, $params, $opts=array()) {
     $curl = curl_init();
-    $opts = array_merge(array(), $opts);
     $opts[CURLOPT_RETURNTRANSFER] = true;
     $opts[CURLOPT_FAILONERROR] = true;
 
@@ -16,7 +15,7 @@ trait cURL {
         $url = "$url?$encoded";
       }
     } else {
-      throw new Exception(sprintf('Invalid http method: %s', $meth));
+      throw new \Exception(sprintf('Invalid http method: %s', $meth));
     }
     
     $opts[CURLOPT_URL] = utf8_encode($url);
@@ -29,7 +28,7 @@ trait cURL {
     if (curl_errno($curl)) {
       $response = curl_error($curl);
     }
-
+    
     curl_close($curl);
 
     return array('body' => $response, 'status' => $status);

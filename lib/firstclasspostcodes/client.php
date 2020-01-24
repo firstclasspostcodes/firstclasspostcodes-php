@@ -2,32 +2,30 @@
 
 namespace Firstclasspostcodes;
 
-class Client implements Operations
+class Client extends Events implements Operations
 {
   use cURL;
 
   use Operations\getPostcode;
+  use Operations\getLookup;
 
   public $config;
 
   public $userAgent;
 
-  public $events;
-
   function __construct($configOverrides = array()) {
+    parent::__construct();
     $this->userAgent = sprintf('Firstclasspostcodes/php@%s', Firstclasspostcodes::VERSION);
     $config = $this->config = new Configuration($configOverrides);
     $log = function($data) use (&$config) {
       if ($config->logger) $config->logger->debug('Received: %o', $data);
     };
-    $this->events = new Events;
-    $this->events->on('request', $log);
-    $this->events->on('response', $log);
+    $this->on('request', $log);
+    $this->on('response', $log);
   }
 
   public function request($method, $path, $queryParams) {
-    $url = $this->getRequestUrl($path);
-    return $this->callRequest($method, $url, $queryParams);
+    return $this->callRequest($method, $this->getRequestUrl($path), $queryParams);
   }
   
   private function callRequest($method, $url, $queryParams) {

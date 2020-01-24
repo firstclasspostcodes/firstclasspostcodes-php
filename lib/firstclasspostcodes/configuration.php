@@ -2,8 +2,7 @@
 
 namespace Firstclasspostcodes;
 
-class Configuration
-{
+class Configuration {
   public $apiKey;
 
   public $host = "api.firstclasspostcodes.com";
@@ -33,7 +32,7 @@ class Configuration
     $domain = sprintf('%s://%s', $this->protocol, $this->host);
     $parts = array($domain, $this->basePath);
     array_walk_recursive($parts, $stripTrailingSlash); 
-    return implode('/', $parts);
+    return implode('/', array_filter($parts));
   }
 
   function getRequestParams() {
