@@ -12,15 +12,15 @@ function checkExtentions() {
 checkExtentions();
 
 // Firstclasspostcodes singleton
-require(dirname(__FILE__) . '/lib/firstclasspostcodes.php');
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/curl.php');
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/events.php');
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/errors.php');
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/configuration.php');
+require(dirname(__FILE__) . '/lib/Firstclasspostcodes.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/Curl.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/Events.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/Errors.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/Configuration.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/Operations.php');
 
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/operations.php');
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/operations/getPostcode.php');
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/operations/getLookup.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/operations/GetPostcode.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/operations/GetLookup.php');
 
-require(dirname(__FILE__) . '/lib/firstclasspostcodes/client.php');
+require(dirname(__FILE__) . '/lib/firstclasspostcodes/Client.php');
 
