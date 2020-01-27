@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-$API_KEY = ENV['API_KEY'];
-
 final class FirstclasspostcodesClientIntegrationTest extends TestCase {
   public function setUp(): void {
     $this->client = new \Firstclasspostcodes\Client([

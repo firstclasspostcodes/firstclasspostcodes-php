@@ -10,14 +10,14 @@ class Events {
   }
 
   public function on($eventName, $handler) {
-    if (!$this->events[$eventName]) {
+    if (!array_key_exists($eventName, $this->events)) {
       $this->events[$eventName] = [];
     }
     return $this->events[$eventName][] = $handler;
   }
 
   public function emit($eventName, ...$args) {
-    if (!$this->events[$eventName]) {
+    if (!array_key_exists($eventName, $this->events)) {
       return;
     }
     foreach ($this->events[$eventName] as $handler) {
@@ -26,7 +26,7 @@ class Events {
   }
 
   public function off($eventName, $handler) {
-    if (!$this->events[$eventName]) {
+    if (!array_key_exists($eventName, $this->events)) {
       return;
     }
     foreach (array_keys($this->events[$eventName], $handler) as $key) {
