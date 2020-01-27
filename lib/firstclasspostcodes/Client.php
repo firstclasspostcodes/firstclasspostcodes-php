@@ -24,7 +24,7 @@ class Client extends Events implements Operations
     $this->on('response', $log);
   }
 
-  public function request($method, $path, $queryParams) {
+  public function request($method, $path, $queryParams = []) {
     return $this->callRequest($method, $this->getRequestUrl($path), $queryParams);
   }
   

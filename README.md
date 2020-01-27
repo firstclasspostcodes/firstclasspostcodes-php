@@ -105,17 +105,11 @@ $client->on('request', function ($request) {
 We provide a mock service of our API as a docker container [available here](https://github.com/firstclasspostcodes/firstclasspostcodes-mock). Once the container is running, the library can be easily configured to use it:
 
 ```php
-$MOCK_API_KEY = "111111111111";
-
-$API_URL = getenv('MOCK_API_URL');
-
-$uri = parse_url($API_URL);
-
 $client = new \Firstclasspostcodes\Client([
-  'apiKey' => $MOCK_API_KEY,
-  'protocol' => $uri['scheme'],
-  'host' => $uri['host'],
-  'basePath' => $uri['path'],
+  'apiKey' => getenv('MOCK_API_KEY'),
+  'protocol' => 'http',
+  'host' => getenv('MOCK_API_HOST'),
+  'basePath' => '/',
 ]);
 
 $client->getPostcode('AB30 1FR');
