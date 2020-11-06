@@ -38,7 +38,7 @@
         ]
     },
     "require-dev": {
-        "overtrue/phplint": "^2.1",
+        "overtrue/phplint": "^2.2",
         "phpunit/phpunit": "^9.4",
         "phpstan/phpstan": "^0.12.52"
     }
