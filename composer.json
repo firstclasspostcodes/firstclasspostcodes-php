@@ -40,6 +40,6 @@
     "require-dev": {
         "overtrue/phplint": "^2.2",
         "phpunit/phpunit": "^9.4",
-        "phpstan/phpstan": "^0.12.54"
+        "phpstan/phpstan": "^0.12.56"
     }
 }
