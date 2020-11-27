@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4d16788aa8993287e19d5c2ef1faea4",
+    "content-hash": "62e2e168331aa7bc9869e7bbc71f6e78",
     "packages": [],
     "packages-dev": [
         {
@@ -216,16 +216,16 @@
         },
         {
             "name": "overtrue/phplint",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/phplint.git",
-                "reference": "dcbb1b9c728de2f05ce6208db7dacb8b3df1c446"
+                "reference": "7debe3100d8b7e92b28db9de5adab991e9b3b419"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/phplint/zipball/dcbb1b9c728de2f05ce6208db7dacb8b3df1c446",
-                "reference": "dcbb1b9c728de2f05ce6208db7dacb8b3df1c446",
+                "url": "https://api.github.com/repos/overtrue/phplint/zipball/7debe3100d8b7e92b28db9de5adab991e9b3b419",
+                "reference": "7debe3100d8b7e92b28db9de5adab991e9b3b419",
                 "shasum": ""
             },
             "require": {
@@ -278,7 +278,7 @@
                 "phplint",
                 "syntax"
             ],
-            "time": "2020-11-04T23:50:40+00:00"
+            "time": "2020-11-25T14:31:25+00:00"
         },
         {
             "name": "phar-io/manifest",
